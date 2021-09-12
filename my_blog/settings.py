@@ -149,18 +149,21 @@ STATICFILES_DIRS = (
 # 静态文件收集目录
 STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 
-# SMTP服务器
-EMAIL_HOST = 'your smtp'
-# 邮箱名
-EMAIL_HOST_USER = 'your email'
-# 邮箱密码
-EMAIL_HOST_PASSWORD = 'your password'
+
+# SMTP服务器，改为你的邮箱的smtp!
+EMAIL_HOST = 'smtp.qq.com'
+# 改为你自己的邮箱名！
+EMAIL_HOST_USER = 'xiahaochang@qq.com'
+# 密码 qq为设置=>账户=>POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务=> 开启服务POP3/SMTP服务=> 生成授权码
+EMAIL_HOST_PASSWORD = 'tmkfkoeitddsgjhj'
 # 发送邮件的端口
-EMAIL_PORT = 25
+EMAIL_PORT = 465
 # 是否使用 TLS
-EMAIL_USE_TLS = True
+# EMAIL_USE_TLS = True
+EMAIL_USE_SSL = True
 # 默认的发件人
-DEFAULT_FROM_EMAIL = 'your email'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 
 # 媒体文件地址
 MEDIA_URL = '/media/'
